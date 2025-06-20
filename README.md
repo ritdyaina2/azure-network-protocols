@@ -5,11 +5,6 @@
 <h1>Network Security Groups (NSGs) and Inspecting Traffic Between Azure Virtual Machines</h1>
 In this tutorial, we observe various network traffic to and from Azure Virtual Machines with Wireshark as well as experiment with Network Security Groups. <br />
 
-
-<h2>Video Demonstration</h2>
-
-- ### [YouTube: Azure Virtual Machines, Wireshark, and Network Security Groups](https://www.youtube.com)
-
 <h2>Environments and Technologies Used</h2>
 
 - Microsoft Azure (Virtual Machines/Compute)
@@ -37,27 +32,36 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 Step 1 - Two virtual machines were created in Azure and placed in the same virtual network to allow communication between them.
 <p>
   
-![p](https://github.com/user-attachments/assets/e0e6d359-3a30-4911-94f7-974c4bf374d0)
+![cap](https://github.com/user-attachments/assets/9ceb42ef-20c6-4e39-9bac-6afaa5bc9c75)
 </p>
 <br />
 
 
-</h2>Network Security Group Rules Overview</h2>
+<h2> Assigning the NSG to the VM</h2>
 
-This is a custom inbound rule created in Azure to block ICMP (ping) traffic. It uses protocol-specific settings and a high priority to override default rules.
+Step 2 -This shows the Network Security Group attached to the VM's network interface, where traffic rules are applied.
+
 <p>
   
-![bound](https://github.com/user-attachments/assets/cf53274a-398c-4526-bd34-0b1b50e5896b)
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+![ping](https://github.com/user-attachments/assets/fa62c5b1-016f-413c-a83e-c2911a3e3e3a)
 </p>
 <br />
 
+
+<h2>Creating a Deny ICMP Rule</h2>
+
+Step 3 -A custom inbound rule was created to block ICMP traffic. The rule uses protocol-specific filtering and a high priority to override default allow rules.
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+![Screenshot 2025-06-19 161848](https://github.com/user-attachments/assets/ae4ffec0-f553-44fc-990f-b8832affca88)
+
 </p>
+<br />
+<h2> Ping Test</h2>
+Step 4 - A ping test was performed after applying a custom Deny-ICMP rule in the Network Security Group. The request was blocked, confirming that the security rule is working as intended.
+
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
+  
+  ![Screenshot 2025-06-20 170847](https://github.com/user-attachments/assets/22408bed-1dcb-4890-97d2-2dcf49d353b5)
+
 <br />
