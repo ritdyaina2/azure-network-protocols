@@ -42,8 +42,12 @@ Step 1 - Two virtual machines were created in Azure and placed in the same virtu
 <br />
 
 
+</h2>Network Security Group Rules Overview</h2>
+
+This is a custom inbound rule created in Azure to block ICMP (ping) traffic. It uses protocol-specific settings and a high priority to override default rules.
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+![bound](https://github.com/user-attachments/assets/cf53274a-398c-4526-bd34-0b1b50e5896b)
 </p>
 <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
