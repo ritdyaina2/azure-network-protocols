@@ -44,6 +44,7 @@ Step 2 -This shows the Network Security Group attached to the VM's network inter
 <p>
   
 ![ping](https://github.com/user-attachments/assets/fa62c5b1-016f-413c-a83e-c2911a3e3e3a)
+
 </p>
 <br />
 
@@ -54,6 +55,7 @@ Step 3 -A custom inbound rule was created to block ICMP traffic. The rule uses p
 <p>
   
 ![Screenshot 2025-06-19 161848](https://github.com/user-attachments/assets/ae4ffec0-f553-44fc-990f-b8832affca88)
+
 
 </p>
 <br />
